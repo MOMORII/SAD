@@ -4,7 +4,7 @@
 - Keisha Geyrozaga(GEY23581805) [GitHub Profile](https://github.com/MOMORII)
 - Anderson Ricardo Gomes Ballestroz (GOM21551647) [GitHub Profile](https://github.com/AndersonRGB)
 - Clement Irivibeguai (IRI22514509) [GitHub Profile](https://github.com/clems27)
-- Angelo Bongon (BON22529894) 
+- Angelo Bongon (BON22529894) [GitHub Profile](https://github.com/Z3R018)
   
 ## Project Overview
 This repository contains the work for the Lab Assignment. We managed tasks using a Kanban board and collaborated via GitHub.
