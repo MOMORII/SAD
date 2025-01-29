@@ -25,3 +25,11 @@ The project tasks were organized using the following workflow:
 | WK2 LAB PART 1 | Anderson G | Done |
 | WK2 LAB PART 2 | Clement I| In Progress |
 | WK2 LAB PART 3 | Keisha G | To-Do |
+
+## Results
+- **WK2 LAB PART 1**: [View Report](https://github.com/MOMORII/SAD/blob/main/lab2part1.md)
+- **WK2 LAB PART 1**: [View Report](https://github.com/MOMORII/SAD/blob/main/lab2part2.md)
+- **WK2 LAB PART 3**: [View Report](https://github.com/MOMORII/SAD/blob/main/lab2part3.md)
+
+## Conclusion
+The team successfully completed the lab assignment by dividing tasks, collaborating via GitHub, and tracking progress using the Kanban board.
