@@ -1,9 +1,10 @@
 # Lab Assignment Report
 
 ## Group Members
-- Keisha Geyrozaga: [GitHub Profile](https://github.com/MOMORII)
-- Anderson Ricardo Gomes Ballestroz: [GitHub Profile](https://github.com/AndersonRGB)
-- Clement Irivibeguai: [GitHub Profile](https://github.com/clems27)
+- Keisha Geyrozaga(GEY23581805) [GitHub Profile](https://github.com/MOMORII)
+- Anderson Ricardo Gomes Ballestroz (GOM21551647) [GitHub Profile](https://github.com/AndersonRGB)
+- Clement Irivibeguai (IRI22514509) [GitHub Profile](https://github.com/clems27)
+- Angelo Bongon (BON22529894) 
   
 ## Project Overview
 This repository contains the work for the Lab Assignment. We managed tasks using a Kanban board and collaborated via GitHub.
@@ -17,3 +18,10 @@ The project tasks were organized using the following workflow:
   
 ### Board Link
 [View Kanban Board]([https://github.com/username/repository/projects/1](https://github.com/users/MOMORII/projects/1/views/1))
+
+## Task Distribution
+| Task | Assigned To | Status |
+|--------------------|---------------|--------------|
+| WK2 LAB PART 1 | Anderson G | Doing |
+| WK2 LAB PART 2 | Clement I| In Progress |
+| WK2 LAB PART 3 | Keisha G | In Progress |
