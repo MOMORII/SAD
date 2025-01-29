@@ -22,6 +22,6 @@ The project tasks were organized using the following workflow:
 ## Task Distribution
 | Task | Assigned To | Status |
 |--------------------|---------------|--------------|
-| WK2 LAB PART 1 | Anderson G | Doing |
+| WK2 LAB PART 1 | Anderson G | Done |
 | WK2 LAB PART 2 | Clement I| In Progress |
-| WK2 LAB PART 3 | Keisha G | In Progress |
+| WK2 LAB PART 3 | Keisha G | To-Do |
