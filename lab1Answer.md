@@ -17,7 +17,7 @@ The project tasks were organized using the following workflow:
 - **Done**: Completed tasks.
   
 ### Board Link
-[View Kanban Board]([https://github.com/username/repository/projects/1](https://github.com/users/MOMORII/projects/1/views/1))
+[View Kanban Board](https://github.com/users/MOMORII/projects/1/views/1)
 
 ## Task Distribution
 | Task | Assigned To | Status |
