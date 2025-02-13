@@ -1,5 +1,5 @@
 (CMP020N207S) Software Architecture & Design
-#SHARE PRICE COMPARISON WEB APPLICATION
+# CSWRK: SHARE PRICE COMPARISON WEB APPLICATION
 ### Written by. "G6-SAD"
 
 ## G6-SAD Group Member Details
