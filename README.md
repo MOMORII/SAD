@@ -13,7 +13,7 @@
 This repository contains the development of our Share Price Comparison Web Application as part of our Software Architecture & Design (CMP020N207S) coursework. The project is built in Java using 'IntelliJ IDEA' and follows architectural principles such as Simple Architecture, Clean Architecture, and Service-Oriented Architecture (SOA). In addition to this, we have included numerous files evidencing our commitment to producing well-structured, organised deliverables. Using a Kanban board, we allocated tasks between us fairly and equally amongst ourselves. This board contains the product backlog, which will be updated with additional tasks according to the immediate sprint checklist—ensuring we prioritise the current sprint’s deadlines before moving on to the next. 
 
 ## Project Overview
-The following information will serve to summarise project information in accordance with the 'Software Architecture & Design' assignment brief.
+The following information will aim to summarise project information in accordance with the 'Software Architecture & Design' assignment brief.
 
 ### Team Member Roles:
 - Keisha - Product Owner
