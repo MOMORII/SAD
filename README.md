@@ -52,8 +52,22 @@ Our architecture follows 'Simple Architecture' principles with the following as 
 - **Graphing Module** - Generates the visual comparisons
 - **UI Layer** - Basic frontend for displaying data
 
-Component Specification Diagram:
-(( TO BE INCLUDED ONCE COMPLETED ))
+### Component Specification Diagram
+Using PlantUML, we created a component UML diagram to illustrate the structure of key components we plan to use in our stock price comparison web application project. It provides us with a graphical representation and a visual overview of the system's archietcture, highlighting the interactions &  relationships between key components, as well as maintaining the application's core functionalities.
+
+![image](https://github.com/user-attachments/assets/bb730995-4951-4a70-b5d8-bee2a2572c4c)
+
+- The **'Main'** class acts as the enrty point foir our applciation and it controls the data retrieval, storage, and UI components. 
+
+- The API layer incluides **'IStockData'** (interface defined to fetch stock price data) and **'YahooFinance'** (class that implements the **'IStockData'** interface to retrieve real-time stock prices from the 'Yahoo Finance' API). 
+
+- Data storage includes the abstract interface **'IDataStorage'** (defines methods to save/retrieve stock price data, evenif the chart is not activelyu in use) and the **'SQLiteDataStorage'** class (implements the **'IDataStorage'** interface to actually store/retrieve strock price data). 
+
+- UI  is handled in the **'ChartDisplay'** class, which  renders stock price charts so users can compare price trends over two different companies over the span of up to 2 years. 
+
+- The data model class **'StockPrice'** is used throughout the program to handle stock price attributes obtained from the data collected. Data processed from the **'StockPrice'** class is made into a visual, interactive chart layout in the **'ChartDisplay'** class.
+
+In conclusion, this UML diagram is pivotal towards constructing the project structure and abstract code on our integrated development environment (IDE), IntelliJ,. and clearly demonstrates our adherence to simple architectural principles.
 
 ## Kanban board
 This is the Kanban board we use to track progress, organise tasks, and ensure smooth workflow management. Each column represents a different stage of the process, helping us visualise work in progress and prioritise tasks effectively. [Kanban Board Link](https://github.com/users/MOMORII/projects/1/views/1)
