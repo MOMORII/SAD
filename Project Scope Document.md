@@ -4,9 +4,9 @@ This document outlines the scope, objectives, and requirements for our 'Stock Pr
 ## (1) Project Objectives
 - Fetch stock price data from an external API.
 - Store retrieved data persistently for offline access.
-- Present stock information in a **graphical format** to enable comparative analysis.
+- Present stock information in a graphical format to enable comparative analysis.
 - Ensure an intuitive UI that provides users with seamless interaction.
-- Implement an **efficient, structured, and scalable architecture** for long-term maintainability.
+- Implement an efficient, structured, and scalable architecture for long-term maintainability.
 
 ## (2) Core System Functionalities
 
