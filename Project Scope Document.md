@@ -1,58 +1,62 @@
 # Project Scope Document
+This document outlines the scope, objectives, and requirements for our 'Stock Price Web Application' group coursework assignment. The project aims to adhere to the principles of **Simple Architecture**, **Clean Architecture**, and **Service-Oriented Architecture (SOA)**, demonstrating the teachings obtained from in-class lectures and lab sessions. Our main objective is to develop a **Java-based financial analysis tool** that allows users to be able to retrieve, store, and compare historical stock prices of various companies over the span of 1-2 years. This tool will oversee financial insights by visualising stock trends over time in a chart display UI.
 
-## 1. Introduction
-This document outlines the scope, objectives, and requirements for the **Share Price Comparison Web Application**. The project follows the **Software Architecture & Design (CMP020N207S) coursework brief**, adhering to the principles of **Simple Architecture**, **Clean Architecture**, and **Service-Oriented Architecture (SOA)**.
-
-The objective is to develop a **Java-based financial analysis tool** that allows users to retrieve, store, and compare historical stock prices of various companies. This tool will facilitate financial insights by visualizing stock trends over time.
-
-## 2. Project Objectives
+## (1) Project Objectives
 - Fetch stock price data from an external API.
 - Store retrieved data persistently for offline access.
 - Present stock information in a **graphical format** to enable comparative analysis.
 - Ensure an intuitive UI that provides users with seamless interaction.
 - Implement an **efficient, structured, and scalable architecture** for long-term maintainability.
 
-## 3. Core System Functionalities
-### **1. Data Retrieval**
-- The system will fetch **historical and real-time stock prices** from **Yahoo Finance API**.
+## (2) Core System Functionalities
+
+### **Data Retrieval**
+- The system will fetch reliable, real-time stock prices from Yahoo Finance API.
 - The API layer will be implemented using an interface (`IStockData`), allowing for future integration of alternative data sources.
 
-### **2. Data Storage**
-- Data will be stored persistently using **SQLite**, chosen due to its lightweight nature, relational format, and compatibility with IntelliJ IDEA.
+### **Data Storage**
+- Data will be stored persistently using SQLite, chosen due to its lightweight nature, relational format, and compatibility with IntelliJ IDEA.
 - The `IDataStorage` interface will define storage and retrieval operations, with `SQLiteDataStorage` handling actual database interactions.
 
-### **3. Data Visualization**
-- Stock price data will be displayed using interactive **graphing components**.
+### **Data Visualisation**
+- Stock price data will be displayed using interactive graphing components.
 - Users can compare stock price trends across different companies.
 - The `ChartDisplay` class will handle UI rendering for stock comparisons.
 
-## 4. Data Sources & Justification
+## (3) Data Sources & Justification
+When deciding on which application to choose to regulate data storage, we opted for SQLite over JSON, primarily due to SQLite's ability to efficiently handle large datasets, support scalability, and enable omplex querying using SQL.
 | Data Source | Purpose | Justification |
 |------------|---------|--------------|
-| Yahoo Finance API | Fetch historical & real-time stock prices | Reliable, widely used in financial applications |
-| SQLite | Persistent data storage | Lightweight, relational, and scalable |
+| Yahoo Finance API | To fetch historical, real-time stock prices | Reliable, widely used in financial applications |
+| SQLite | To persistently data storage (even as it's 'offline') | Lightweight, relational, and scalable |
 
-SQLite was selected over JSON storage due to its ability to efficiently handle **large datasets**, support **scalability**, and enable **complex querying using SQL**.
-
-## 5. Key Use Cases
+## (4) Key Use Cases
+These key use cases demonstrate the main ways in which we expect & envision users to engage with our 'Stock Price Web Application' project.
 | Use Case | Description |
 |---------|------------|
-| Fetch stock price | Retrieve stock price data from Yahoo Finance |
-| Store stock data | Save stock prices in SQLite for offline access |
-| Compare stock trends | View stock performance of two different companies |
-| Visualize stock charts | Display stock price movements graphically |
+| 1. Fetch stock price | Retrieve stock price data from Yahoo Finance |
+| 2. Store stock data | Save stock prices in SQLite for offline access |
+| 3. Compare stock trends | View stock performance of two different companies |
+| 4. Visualise stock charts | Display stock price movements graphically |
 
-## 6. Project Deliverables
-- **Project Repository**: Contains source code, documentation, UML diagrams, and test cases.
+## (5) Project Deliverables
+- **Project Repository**: Contains the essential documentation and complete codebase, including project files and the Java source code folder.
+
 - **README.md**: Summarises project information, objectives, architecture, and technologies used.
-- **Kanban Board**: Tracks sprint progress and backlog tasks.
-- **Component UML Diagram**: Illustrates project structure and interactions.
+- **Component UML Diagram**: Illustrates (and explains) the entire project structure and the shared interactions between different classes and interfaces (located within the README.md file).
+  
+- **Project Scope Document.md** - Defines the project scope and deliverables for this group coursework assignment.
+- **Code of Conduct.pdf** - Establishes the rules and expectations for all group memembers.
+- **Team Agreement Sheet.pdf** - Details roles and responsibilities expected from every team member involved in the group project.
+- **Timesheet Availability.docx** - Displays the availability of team members on a weekly basis for this semester.
+- **Meeting Notes.docx** - Records the discussion details between team members regarding the project's current progress & future plans.
+  
+- **Kanban Board**: Tracks progress on a sprint-by-sprint basis, using checklist items and tasks to ensure project deadlines are met.
 
-## 7. Architectural Considerations
-- **Simple Architecture**: Focuses on a well-structured, organised approach.
-- **Clean Architecture**: Ensures separation of concerns and maintainability.
-- **Service-Oriented Architecture (SOA)**: Allows modular integration of APIs and services.
+## (6) Architectural Considerations
+- **Simple Architecture**: Focuses on a well-structured, organised approach that keeps the system design minimal and easy-to-understand.
+- **Clean Architecture**: Ensures 'separation of concerns' (by dividing the system into layers w/distinct responsibilities) and maintainability throughout the entire system.
+- **Service-Oriented Architecture (SOA)**: Allows modular integration of APIs and services by organising functions into reusable services that can communicate over a network.
 
-## 8. Conclusion
-The **Share Price Comparison Web Application** is designed to provide users with **reliable financial insights** by fetching and visualizing stock price data. By adhering to **agile methodologies** and architectural principles, the project ensures maintainability, extensibility, and efficient performance. This document serves as the foundation for development, guiding the implementation of core functionalities in 'Sprint 1' and beyond.
-
+## Conclusion
+The 'Share Price Comparison Web Application' is designed to provide users with consistent, real-time financial insights by fetching and visualising stock price data. By adhering to agile methodologies and architectural principles, the application ensures maintainability, extensibility, and efficient performance is upheld throughout the project's duration. This document serves as the foundation for defining the project's scope, objectives, and deliverables, providing a structured framework for successful execution.
