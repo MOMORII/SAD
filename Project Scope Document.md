@@ -30,7 +30,7 @@ When deciding on which application to choose to regulate data storage, we opted 
 | Yahoo Finance API | To fetch historical, real-time stock prices | Reliable, widely used in financial applications |
 | SQLite | To persistently data storage (even as it's 'offline') | Lightweight, relational, and scalable |
 
-## (4) Key Use Cases
+## (4) Key Use Cases & User Stories
 These key use cases demonstrate the main ways in which we expect & envision users to engage with our 'Stock Price Web Application' project.
 | Use Case | Description |
 |---------|------------|
@@ -38,6 +38,18 @@ These key use cases demonstrate the main ways in which we expect & envision user
 | 2. Store stock data | Save stock prices in SQLite for offline access |
 | 3. Compare stock trends | View stock performance of two different companies |
 | 4. Visualise stock charts | Display stock price movements graphically |
+
+**Fetch Stock Price**
+As a user, I want to retrieve stock price data from Yahoo Finance so that I can get up-to-date information on stock prices.
+
+**Store Stock Data**
+As a user, I want to save stock prices in SQLite for offline access so that I can view the stock data even when I am not connected to the internet.
+
+**Compare Stock Trends**
+As a user, I want to view the stock performance of two different companies so that I can compare their trends and make informed investment decisions.
+
+**Visualize Stock Charts**
+As a user, I want to display stock price movements graphically so that I can easily analyze trends and patterns in the stock's price over time.
 
 ## (5) Project Deliverables
 - **Project Repository**: Contains the essential documentation and complete codebase, including project files and the Java source code folder.
