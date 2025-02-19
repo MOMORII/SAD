@@ -55,7 +55,7 @@ Our architecture follows 'Simple Architecture' principles with the following as 
 ### Component Specification Diagram
 Using PlantUML, we created a component UML diagram to illustrate the structure of key components we plan to use in our stock price comparison web application project. It provides us with a graphical representation and a visual overview of the system's archietcture, highlighting the interactions &  relationships between key components, as well as maintaining the application's core functionalities.
 
-![image](https://github.com/user-attachments/assets/bb730995-4951-4a70-b5d8-bee2a2572c4c)
+![image](https://github.com/user-attachments/assets/85ac5873-bb0b-4e19-94d9-f9ab2bd6c4a5)
 
 - The **'Main'** class acts as the enrty point foir our applciation and it controls the data retrieval, storage, and UI components. 
 
