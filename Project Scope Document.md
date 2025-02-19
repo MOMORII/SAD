@@ -40,16 +40,16 @@ These key use cases demonstrate the main ways in which we expect & envision user
 | 4. Visualise stock charts | Display stock price movements graphically |
 
 **Fetch Stock Price**
-As a user, I want to retrieve stock price data from Yahoo Finance so that I can get up-to-date information on stock prices.
+- As a user, I want to retrieve stock price data from Yahoo Finance so that I can get up-to-date information on stock prices.
 
 **Store Stock Data**
-As a user, I want to save stock prices in SQLite for offline access so that I can view the stock data even when I am not connected to the internet.
+- As a user, I want to save stock prices in SQLite for offline access so that I can view the stock data even when I am not connected to the internet.
 
 **Compare Stock Trends**
-As a user, I want to view the stock performance of two different companies so that I can compare their trends and make informed investment decisions.
+- As a user, I want to view the stock performance of two different companies so that I can compare their trends and make informed investment decisions.
 
 **Visualize Stock Charts**
-As a user, I want to display stock price movements graphically so that I can easily analyze trends and patterns in the stock's price over time.
+- As a user, I want to display stock price movements graphically so that I can easily analyze trends and patterns in the stock's price over time.
 
 ## (5) Project Deliverables
 - **Project Repository**: Contains the essential documentation and complete codebase, including project files and the Java source code folder.
