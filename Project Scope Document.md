@@ -48,8 +48,8 @@ These key use cases demonstrate the main ways in which we expect & envision user
 **Compare Stock Trends**
 - As a user, I want to view the stock performance of two different companies so that I can compare their trends and make informed investment decisions.
 
-**Visualize Stock Charts**
-- As a user, I want to display stock price movements graphically so that I can easily analyze trends and patterns in the stock's price over time.
+**Visualise Stock Charts**
+- As a user, I want to display stock price movements graphically so that I can easily analyse trends and patterns in the stock's price over time.
 
 ## (5) Project Deliverables
 - **Project Repository**: Contains the essential documentation and complete codebase, including project files and the Java source code folder.
