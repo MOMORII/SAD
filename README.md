@@ -55,8 +55,7 @@ Our architecture follows 'Simple Architecture' principles with the following as 
 ### Component Specification Diagram
 Using PlantUML, we created a component UML diagram to illustrate the structure of key components we plan to use in our stock price comparison web application project. It provides us with a graphical representation and a visual overview of the system's archietcture, highlighting the interactions &  relationships between key components, as well as maintaining the application's core functionalities.
 
-![image](https://github.com/user-attachments/assets/1604801d-0ba0-4189-a8fc-2ed38f3b9399)
-
+![image](https://github.com/user-attachments/assets/f350cc4a-7869-4180-aafd-988009e7c1c1)
   
 - The **'MainApplication'** class serves as the JavaFX entry point with the **'MainController'** class handling UI logic and user interactions.
 
