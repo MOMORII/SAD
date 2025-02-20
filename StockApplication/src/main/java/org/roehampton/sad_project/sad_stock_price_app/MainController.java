@@ -1,43 +1,41 @@
 package org.roehampton.sad_project.sad_stock_price_app;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.roehampton.sad_project.sad_stock_price_app.dataModel.stockPrice;
-import org.roehampton.sad_project.sad_stock_price_app.dataStorage.IDataStorage;
-import org.roehampton.sad_project.sad_stock_price_app.dataStorage.SQLiteDataStorage;
-import org.roehampton.sad_project.sad_stock_price_app.stockDataApiFetching.IStockData;
-import org.roehampton.sad_project.sad_stock_price_app.stockDataApiFetching.yahooFinance;
+import org.roehampton.sad_project.sad_stock_price_app.dataStorageAndRetrievalComponents.IStockData;
+import org.roehampton.sad_project.sad_stock_price_app.dataStorageAndRetrievalComponents.IDataStorage;
+import org.roehampton.sad_project.sad_stock_price_app.dataStorageAndRetrievalComponents.SQLiteDataStorage;
+import org.roehampton.sad_project.sad_stock_price_app.dataStorageAndRetrievalComponents.yahooFinance;
+import org.roehampton.sad_project.sad_stock_price_app.modelComponents.stockPrice;
+
 public class MainController {
-    private final IStockData stockData = new yahooFinance(); // Add final
-    private final IDataStorage dataStorage = new SQLiteDataStorage(); // Add final
-
-    @FXML
-    private TextField stockSymbolInput;
-
-    @FXML
-    private Button fetchButton;
 
     @FXML
     private Label stockPriceLabel;
 
     @FXML
-    protected void onFetchButtonClick() {
+    private TextField stockSymbolInput;
+
+    private final IStockData stockData = new yahooFinance();
+    private final IDataStorage storage = new SQLiteDataStorage();
+
+    @FXML
+    protected void onFetchStockPrice() {
+        System.out.println("Fetch Price button clicked."); // Debugging
+
         String symbol = stockSymbolInput.getText().toUpperCase();
         if (!symbol.isEmpty()) {
-            // Fetch new stock price and save it
-            stockPrice stockPrice = stockData.getStockPrice(symbol);
-            dataStorage.saveStockPrice(stockPrice);
+            stockPrice price = stockData.getStockPrice(symbol);
+            System.out.println("Retrieved stock: " + price.getSymbol() + " = $" + price.getPrice());
 
-            // Retrieve the saved stock price
-            stockPrice retrievedStock = dataStorage.retrieveStockPrice(symbol);
+            // Save to storage
+            storage.saveStockPrice(symbol, String.valueOf(price.getPrice()));
 
-            // Display the retrieved stock price
-            stockPriceLabel.setText("Stock: " + retrievedStock.getSymbol() + " | Price: $" + retrievedStock.getPrice());
+            // Update UI label
+            stockPriceLabel.setText("Stock: " + price.getSymbol() + " | Price: $" + price.getPrice());
         } else {
             stockPriceLabel.setText("Please enter a stock symbol!");
         }
     }
-
 }
