@@ -1,41 +1,42 @@
 package org.roehampton.sad_project.sad_stock_price_app;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.roehampton.sad_project.sad_stock_price_app.dataStorageAndRetrievalComponents.IStockData;
-import org.roehampton.sad_project.sad_stock_price_app.dataStorageAndRetrievalComponents.IDataStorage;
-import org.roehampton.sad_project.sad_stock_price_app.dataStorageAndRetrievalComponents.SQLiteDataStorage;
-import org.roehampton.sad_project.sad_stock_price_app.dataStorageAndRetrievalComponents.yahooFinance;
-import org.roehampton.sad_project.sad_stock_price_app.modelComponents.stockPrice;
+import org.roehampton.sad_project.sad_stock_price_app.data.StockPrice;
+import org.roehampton.sad_project.sad_stock_price_app.fetching.IStockData;
+import org.roehampton.sad_project.sad_stock_price_app.fetching.YahooFinance;
+import org.roehampton.sad_project.sad_stock_price_app.storage.IDataStorage;
+import org.roehampton.sad_project.sad_stock_price_app.storage.SQLiteDataStorage;
 
 public class MainController {
-
+    @FXML
+    private TextField stockSymbolField;
     @FXML
     private Label stockPriceLabel;
 
-    @FXML
-    private TextField stockSymbolInput;
-
-    private final IStockData stockData = new yahooFinance();
-    private final IDataStorage storage = new SQLiteDataStorage();
+    private final IStockData stockService = new YahooFinance(); // Fetches live stock price
+    private final IDataStorage storageService = new SQLiteDataStorage(); // Stores fetched stock prices
 
     @FXML
-    protected void onFetchStockPrice() {
-        System.out.println("Fetch Price button clicked."); // Debugging
-
-        String symbol = stockSymbolInput.getText().toUpperCase();
+    public void fetchStock() {
+        String symbol = stockSymbolField.getText().toUpperCase();
         if (!symbol.isEmpty()) {
-            stockPrice price = stockData.getStockPrice(symbol);
-            System.out.println("Retrieved stock: " + price.getSymbol() + " = $" + price.getPrice());
+            // Fetch stock price from YahooFinance
+            StockPrice stockPrice = stockService.getStock(symbol);
 
-            // Save to storage
-            storage.saveStockPrice(symbol, String.valueOf(price.getPrice()));
+            // Save fetched stock price to storage
+            storageService.saveStock(symbol, stockPrice);
 
-            // Update UI label
-            stockPriceLabel.setText("Stock: " + price.getSymbol() + " | Price: $" + price.getPrice());
-        } else {
-            stockPriceLabel.setText("Please enter a stock symbol!");
+            // Display stock price
+            displayStockPrice(stockPrice);
         }
+    }
+
+    private void displayStockPrice(StockPrice stock) {
+        Platform.runLater(() ->
+                stockPriceLabel.setText("Stock Price: " + stock.getSymbol() + " = $" + String.format("%.2f", stock.getPrice()))
+        );
     }
 }

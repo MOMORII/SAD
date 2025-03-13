@@ -1,8 +1,8 @@
 package org.roehampton.sad_project.sad_stock_price_app.UI;
 
-public class ChartDisplay implements IApplicationView {
-    @Override
-    public void showStockPrice(String symbol, double price) {
-        System.out.println("Displaying: " + symbol + " at $" + price);
-    }
+import org.roehampton.sad_project.sad_stock_price_app.data.StockPrice;
+import java.util.List;
+
+public interface ChartDisplay {
+    void displayStockChart(List<StockPrice> stockPrices);
 }
