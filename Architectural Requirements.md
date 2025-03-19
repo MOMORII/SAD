@@ -22,7 +22,7 @@ As mentioned before, this component UML diagram has been made to better reflect 
 ## (1) Business Concept Model 
 The business concept model (BCM) defines the core business entities and their relationships within the stock price comparison system. It provides a high-level abstraction of how different elements (such as stocks, users, and share price data) interact with one another. By modeling business concepts, this diagram ensures that the system’s functional design aligns with the intended business objectives, making it easier to map real-world requirements to technical implementations.
 
-((( a n d e r s o n )))
+((( a n d e r s o n // a n g e l o )))
 
 ## (2) Use Case Models
 The use case models capture the key user interactions and system behaviors required to fulfill the application’s primary functions, which have been illustrated on the README.md file and further emphasised on the 'Project Scope Document'.md file. These core functionalities include fetching stock prices, storing data persistently, comparing stock trends, and visualising stock performance over time. Each use case diagram identifies the actors (users) and their roles, mapping out a step-by-step flow of system interactions. These models provide a foundation for defining system requirements and ensuring a seamless user experience.
@@ -105,14 +105,30 @@ Steps:
 ## (3) System Interfaces
 To support a well-structured and maintainable architecture, the system relies on clearly defined interfaces that dictate how components interact. This section outlines the essential system interfaces, each mapped to a specific use case requirement. Interfaces (such as IStockPriceFetcher, IStockDataStorage, IStockComparison, and IStockChartRenderer ensure that system functionalities—ranging from data retrieval and persistence to visualization—are modular and loosely coupled. These interfaces play a crucial role in ensuring flexibility and scalability for future enhancements.
 
-((( k e i s h a )))
+1. FETCH STOCK PRICE:    
+![image](https://github.com/user-attachments/assets/89d2e269-bae5-42c5-ad7c-1fbea34408dd)
+
+2. STORE STOCK DATA:   
+![image](https://github.com/user-attachments/assets/2fd75bc7-d05f-4245-98dd-042dd2392b6a)
+
+
+3. COMPARE STOCK TRENDS
+![image](https://github.com/user-attachments/assets/64532d72-cfc7-4ddc-a098-550f1882550c)
+
+
+4. VISUALISE STOCK CHARTS
+![image](https://github.com/user-attachments/assets/0d0d8224-2ad2-4ec6-a359-b63f4bfd433a)
+
 
 ## (4) Business Type Model
 This UML provides a detailed breakdown of key bussinss objects, their attributes, and their relationships within the stock price comparison web application. It effectively serves as a blueprint for database design and object-oriented implementation. This model is able to ensure data consistency across different components and is capable of supporting efficient querying and manipulation of stock price data.
 
-((( a n d e r s o n )))
 
-## (5) System Interfaces (Initial System Architecture)
-The Initial System Architecture (ISA), otherwise known as the system interfaces, lays the foundation for the entire software design by incorporating principles of SOLID principles, service-oriented architecture (SOA) and clean architectural require,ments. It outlines the web application's high-level structure, detailing how data flows between components, APIs, storage systems, and the user interface. By establishing clear layers of abstraction, this architectural model ensures that business logic, data handling, and UI components remain decoupled, promoting maintainability and scalability.      
+
+## (5) Initial System Architecture
+The Initial System Architecture (ISA) lays the foundation for the entire software design by incorporating principles of SOLID principles, service-oriented architecture (SOA) and clean architectural require,ments. It outlines the web application's high-level structure, detailing how data flows between components, APIs, storage systems, and the user interface. By establishing clear layers of abstraction, this architectural model ensures that business logic, data handling, and UI components remain decoupled, promoting maintainability and scalability.      
 
 ((( a n g e l o )))
+
+
+## (6) Business Interfaces
