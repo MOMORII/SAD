@@ -6,9 +6,11 @@ import javafx.stage.Stage;
 import org.roehampton.sad_project.sad_stock_price_app.data.StockPrice;
 import java.util.List;
 
+// responsible for displaying stock price data as a chart
 public class DataVisualization implements ChartDisplay {
     @Override
     public void displayStockChart(List<StockPrice> stockPrices) {
+        // creates new stage for stock chart
         Stage stage = new Stage();
         stage.setTitle("Stock Price Chart");
 
@@ -22,6 +24,7 @@ public class DataVisualization implements ChartDisplay {
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Stock Prices");
 
+        // adds stock data to the chart
         for (StockPrice stock : stockPrices) {
             series.getData().add(new XYChart.Data<>(stock.getSymbol(), stock.getPrice()));
         }
