@@ -22,7 +22,8 @@ As mentioned before, this component UML diagram has been made to better reflect 
 ## (1) Business Concept Model 
 The business concept model (BCM) defines the core business entities and their relationships within the stock price comparison system. It provides a high-level abstraction of how different elements (such as stocks, users, and share price data) interact with one another. By modeling business concepts, this diagram ensures that the system’s functional design aligns with the intended business objectives, making it easier to map real-world requirements to technical implementations.
 
-((( a n d e r s o n // a n g e l o )))
+![Screenshot 2025-03-19 025017](https://github.com/user-attachments/assets/a52e22b8-f629-4cc4-bb44-3c23ad9f04e9)
+
 
 ## (2) Use Case Models
 The use case models capture the key user interactions and system behaviors required to fulfill the application’s primary functions, which have been illustrated on the README.md file and further emphasised on the 'Project Scope Document'.md file. These core functionalities include fetching stock prices, storing data persistently, comparing stock trends, and visualising stock performance over time. Each use case diagram identifies the actors (users) and their roles, mapping out a step-by-step flow of system interactions. These models provide a foundation for defining system requirements and ensuring a seamless user experience.
