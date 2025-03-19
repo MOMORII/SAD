@@ -134,5 +134,6 @@ The Initial System Architecture (ISA) lays the foundation for the entire softwar
 
 
 ## (6) Business Interfaces
+Business interfaces define how different components of a system interact while maintaining modularity and flexibility. They act as contracts between system services and business objects, ensuring clear communication without creating direct dependencies. By using UML to model these interfaces, we can better understand how data flows through the system and how different components collaborate to fulfill business use cases. This structured approach improves maintainability, scalability, and ease of future modifications.
 ![image](https://github.com/user-attachments/assets/bb7416aa-db86-47ab-a3d8-205f26173dc8)
 
