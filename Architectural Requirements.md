@@ -134,3 +134,5 @@ The Initial System Architecture (ISA) lays the foundation for the entire softwar
 
 
 ## (6) Business Interfaces
+![image](https://github.com/user-attachments/assets/bb7416aa-db86-47ab-a3d8-205f26173dc8)
+
