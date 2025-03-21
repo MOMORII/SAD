@@ -1,4 +1,4 @@
-package org.roehampton.sad_project.sad_stock_price_app.model;
+package org.roehampton.sad_project.sad_stock_price_app.business_model;
 
 /**
  * Interface for data storage operations.
@@ -6,3 +6,4 @@ package org.roehampton.sad_project.sad_stock_price_app.model;
 public interface IDataStorage {
     void saveStockData(String symbol, double price);
 }
+
