@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.roehampton.sad_project.sad_stock_price/org.roehampton.sad_project.sad_stock_price_app.MainApplication
+                                org.roehampton.sad_project.sad_stock_price/org.roehampton.sad_project.sad_stock_price_app.StockApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
