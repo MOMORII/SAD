@@ -3,7 +3,7 @@ package org.roehampton.sad_project.sad_stock_price_app;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.roehampton.sad_project.sad_stock_price_app.model.*;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.*;
 import org.roehampton.sad_project.sad_stock_price_app.data.StockDataProvider;
 import org.roehampton.sad_project.sad_stock_price_app.data.SQLiteStorage;
 import org.roehampton.sad_project.sad_stock_price_app.data.YahooFinance;
