@@ -1,7 +1,7 @@
 package org.roehampton.sad_project.sad_stock_price_app.data;
 
-import org.roehampton.sad_project.sad_stock_price_app.model.IDataStorage;
-import org.roehampton.sad_project.sad_stock_price_app.model.IStockData;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IDataStorage;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockData;
 
 /**
  * SQLiteStorage implements data storage interfaces for stock data persistence.
