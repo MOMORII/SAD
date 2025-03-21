@@ -1,4 +1,4 @@
-package org.roehampton.sad_project.sad_stock_price_app.ui;
+package org.roehampton.sad_project.sad_stock_price_app;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -7,6 +7,9 @@ import org.roehampton.sad_project.sad_stock_price_app.model.*;
 import org.roehampton.sad_project.sad_stock_price_app.data.StockDataProvider;
 import org.roehampton.sad_project.sad_stock_price_app.data.SQLiteStorage;
 import org.roehampton.sad_project.sad_stock_price_app.data.YahooFinance;
+import org.roehampton.sad_project.sad_stock_price_app.ui.ChartDisplay;
+import org.roehampton.sad_project.sad_stock_price_app.ui.UserPortfolio;
+import org.roehampton.sad_project.sad_stock_price_app.ui.Watchlist;
 
 /**
  * MainController handles UI interactions and integrates key components like Watchlist, UserPortfolio, and ChartDisplay.
