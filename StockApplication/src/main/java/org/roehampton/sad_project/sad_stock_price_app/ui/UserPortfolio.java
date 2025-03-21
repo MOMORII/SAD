@@ -1,6 +1,6 @@
 package org.roehampton.sad_project.sad_stock_price_app.ui;
 
-import org.roehampton.sad_project.sad_stock_price_app.model.IPortfolioManager;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IPortfolioManager;
 
 /**
  * UserPortfolio manages user's stock investments.
