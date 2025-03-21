@@ -1,8 +1,8 @@
 package org.roehampton.sad_project.sad_stock_price_app.data;
 
-import org.roehampton.sad_project.sad_stock_price_app.model.IStockDataProvider;
-import org.roehampton.sad_project.sad_stock_price_app.model.IStockAPI;
-import org.roehampton.sad_project.sad_stock_price_app.model.IDataStorage;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockDataProvider;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockAPI;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IDataStorage;
 
 /**
  * StockDataProvider fetches data from YahooFinance and stores it using SQLiteStorage.
