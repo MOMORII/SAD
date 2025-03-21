@@ -1,7 +1,7 @@
 package org.roehampton.sad_project.sad_stock_price_app.data;
 
-import org.roehampton.sad_project.sad_stock_price_app.model.IDataRetrieval;
-import org.roehampton.sad_project.sad_stock_price_app.model.IStockAPI;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IDataRetrieval;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockAPI;
 
 /**
  * StockPrice retrieves stock prices using an external API.
