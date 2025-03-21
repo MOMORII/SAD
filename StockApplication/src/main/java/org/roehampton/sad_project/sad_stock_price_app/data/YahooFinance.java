@@ -1,6 +1,6 @@
 package org.roehampton.sad_project.sad_stock_price_app.data;
 
-import org.roehampton.sad_project.sad_stock_price_app.model.IStockAPI;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockAPI;
 
 /**
  * YahooFinance retrieves real-time stock prices from an external API.
