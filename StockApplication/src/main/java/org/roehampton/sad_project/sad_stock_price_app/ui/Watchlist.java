@@ -1,6 +1,6 @@
 package org.roehampton.sad_project.sad_stock_price_app.ui;
 
-import org.roehampton.sad_project.sad_stock_price_app.model.IWatchlistManager;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IWatchlistManager;
 
 /**
  * Watchlist manages a list of tracked stocks.
