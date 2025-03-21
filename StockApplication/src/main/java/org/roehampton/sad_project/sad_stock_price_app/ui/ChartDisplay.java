@@ -1,6 +1,6 @@
 package org.roehampton.sad_project.sad_stock_price_app.ui;
 
-import org.roehampton.sad_project.sad_stock_price_app.model.IDataVisualisation;
+import org.roehampton.sad_project.sad_stock_price_app.business_model.IDataVisualisation;
 
 /**
  * ChartDisplay visualizes stock price data.
