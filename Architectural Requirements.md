@@ -130,7 +130,8 @@ This UML provides a detailed breakdown of key bussinss objects, their attributes
 ## (5) Initial System Architecture
 The Initial System Architecture (ISA) lays the foundation for the entire software design by incorporating principles of SOLID principles, service-oriented architecture (SOA) and clean architectural require,ments. It outlines the web application's high-level structure, detailing how data flows between components, APIs, storage systems, and the user interface. By establishing clear layers of abstraction, this architectural model ensures that business logic, data handling, and UI components remain decoupled, promoting maintainability and scalability.      
 
-![image](https://github.com/user-attachments/assets/88f833b3-ad0c-4575-a78c-79428f27cd0c)
+![Screenshot 2025-03-23 024356](https://github.com/user-attachments/assets/2655ae8d-ae40-4560-bb32-9582fb8b7321)
+
 
 
 ## (6) Business Interfaces
