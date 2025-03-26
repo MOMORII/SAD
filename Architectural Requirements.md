@@ -124,7 +124,8 @@ To support a well-structured and maintainable architecture, the system relies on
 ## (4) Business Type Model
 This UML provides a detailed breakdown of key bussinss objects, their attributes, and their relationships within the stock price comparison web application. It effectively serves as a blueprint for database design and object-oriented implementation. This model is able to ensure data consistency across different components and is capable of supporting efficient querying and manipulation of stock price data.
 
-![image](https://github.com/user-attachments/assets/def87f48-bd1e-4ea7-8685-211db0578203)
+![businesstypemodel drawio (2)](https://github.com/user-attachments/assets/0cae3580-5c4f-4fee-9a73-da8ad7dd2071)
+
 
 
 
