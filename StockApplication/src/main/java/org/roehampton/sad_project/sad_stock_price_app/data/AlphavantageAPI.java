@@ -1,3 +1,8 @@
+/*
+   NEEDS TO BE UPDATED TO UTILISE ALPHAVANTAGE STOCK PRICE API RESOURCES (FREE)
+   ^^^ rather than providing random math numbers and simulated API responses
+ */
+
 package org.roehampton.sad_project.sad_stock_price_app.data;
 
 import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockAPI;

@@ -8,6 +8,8 @@ CHANGES TO BE MADE (SUGGESTIONS FROM PRODUCT OWNER):
 4. Evidence, at least, one of each S.O.L.I.D principle applied in any area of the code.
 5. Ensure that the component UML diagram and business UMLs are followed correctly.
 
+6. Many classes are too simplistic and only PRINT out their functions to the terminal, rather than actually doing them. Please fix.
+
 ADDITIONAL CHANGE THAT NEEDS TO BE MADE: Stock symbol does not automatically appear under its bar. It should show up without needing to press 'GET PRICE' twice.
 
 ((also please add comments beneath code blocks so it's clearer what happens, if possible when you can))
