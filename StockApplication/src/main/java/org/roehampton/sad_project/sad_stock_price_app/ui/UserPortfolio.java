@@ -4,6 +4,13 @@ import org.roehampton.sad_project.sad_stock_price_app.business_model.IPortfolioM
 
 /**
  * UserPortfolio manages user's stock investments.
+ *
+ * SOLID:
+ *  - Single Responsibility: Only deals with adding/removing shares from the user portfolio.
+ *  - Interface Segregation (ISP): Implements only the IPortfolioManager methods, no extra burden.
+ *
+ * SOA:
+ *  - A separate "portfolio service" that can be called from the controller or other parts of the system.
  */
 public class UserPortfolio implements IPortfolioManager {
     @Override

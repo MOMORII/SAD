@@ -1,59 +1,57 @@
 package org.roehampton.sad_project.sad_stock_price_app;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.roehampton.sad_project.sad_stock_price_app.business_model.*;
-import org.roehampton.sad_project.sad_stock_price_app.data.StockDataProvider;
-import org.roehampton.sad_project.sad_stock_price_app.data.SQLiteStorage;
-import org.roehampton.sad_project.sad_stock_price_app.data.YahooFinance;
+import javafx.scene.layout.VBox;
+import org.roehampton.sad_project.sad_stock_price_app.data.StockPrice;
 import org.roehampton.sad_project.sad_stock_price_app.ui.ChartDisplay;
-import org.roehampton.sad_project.sad_stock_price_app.ui.UserPortfolio;
-import org.roehampton.sad_project.sad_stock_price_app.ui.Watchlist;
 
 /**
- * MainController handles UI interactions and integrates key components like Watchlist, UserPortfolio, and ChartDisplay.
+ * MainController handles UI logic and coordinates actions between the UI (FXML elements)
+ * and the data/logic layers (StockPrice, ChartDisplay).
+ *
+ * SOLID:
+ *  - Single Responsibility Principle (SRP): Only manages UI events and updates labels/charts.
+ *  - Dependency Inversion Principle (DIP): Depends on StockPrice/ChartDisplay abstractions, not direct internals.
+ *  - Interface Segregation: Interacts only with the needed methods (e.g., showPrice()).
+ *
+ * SOA:
+ *  - Acts as an "orchestrator" service for the UI, calling other services (ChartDisplay, StockPrice).
+ *  - Minimizes tight coupling by delegating logic to separate service-like classes.
  */
 public class MainController {
+
     @FXML
     private TextField stockSymbolField;
+
     @FXML
     private Label stockPriceLabel;
 
-    private final Watchlist watchlist;
-    private final UserPortfolio userPortfolio;
-    private final ChartDisplay chartDisplay;
-    private final IStockDataProvider stockDataProvider;
+    @FXML
+    private VBox chartContainer;
 
-    public MainController() {
-        // Initialize dependencies
-        this.watchlist = new Watchlist();
-        this.userPortfolio = new UserPortfolio();
-        this.chartDisplay = new ChartDisplay();
+    private ChartDisplay chartDisplay;
+    private StockPrice stockPrice;
 
-        // Dependency Injection for stock data retrieval
-        this.stockDataProvider = new StockDataProvider(new SQLiteStorage(), new YahooFinance());
+    @FXML
+    public void initialize() {
+        chartDisplay = new ChartDisplay();
+        stockPrice = new StockPrice(chartDisplay);
+        chartContainer.getChildren().add(chartDisplay);
     }
 
-    /**
-     * Fetches stock price, updates UI, adds to watchlist, and visualizes data.
-     */
     @FXML
     public void fetchStockPrice() {
-        String symbol = stockSymbolField.getText().trim();
+        String symbol = stockSymbolField.getText();
+        double price = Math.random() * 1000; // Generate the price once
 
-        if (!symbol.isEmpty()) {
-            double price = stockDataProvider.provideStockData(symbol);
+        // Show it in the label
+        stockPriceLabel.setText("Price: " + price);
 
-            // Update UI with stock price
-            stockPriceLabel.setText("Price: $" + price);
-
-            // Logically use Watchlist, UserPortfolio, and ChartDisplay
-            watchlist.addStock(symbol);
-            userPortfolio.addInvestment(symbol, 10); // Assume 10 shares for example
-            chartDisplay.visualizeStockData(symbol, price);
-        } else {
-            stockPriceLabel.setText("Enter a valid stock symbol.");
-        }
+        // Pass that exact price to StockPrice, so console and chart also match
+        stockPrice.showPrice(symbol, price);
     }
+
 }

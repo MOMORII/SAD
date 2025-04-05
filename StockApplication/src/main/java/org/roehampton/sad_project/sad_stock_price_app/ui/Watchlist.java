@@ -4,6 +4,13 @@ import org.roehampton.sad_project.sad_stock_price_app.business_model.IWatchlistM
 
 /**
  * Watchlist manages a list of tracked stocks.
+ *
+ * SOLID:
+ *  - Single Responsibility: Maintains watchlist (add/remove stock). Doesn't do storage or UI tasks.
+ *  - Interface Segregation: Implements only IWatchlistManager's responsibilities.
+ *
+ * SOA:
+ *  - Acts as a small "watchlist service" in the larger architecture.
  */
 public class Watchlist implements IWatchlistManager {
     @Override
