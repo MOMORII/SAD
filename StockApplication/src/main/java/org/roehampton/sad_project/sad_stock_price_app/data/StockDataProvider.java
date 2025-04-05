@@ -5,7 +5,7 @@ import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockAPI;
 import org.roehampton.sad_project.sad_stock_price_app.business_model.IDataStorage;
 
 /**
- * StockDataProvider fetches data from an IStockAPI (e.g., YahooFinance) and stores it via IDataStorage (e.g., SQLiteStorage).
+ * StockDataProvider fetches data from an IStockAPI (e.g., AlphavantageAPI) and stores it via IDataStorage (e.g., PersistentStorage).
  *
  * SOLID:
  *  - Single Responsibility: Retrieves and stores stock data, no UI or portfolio management here.

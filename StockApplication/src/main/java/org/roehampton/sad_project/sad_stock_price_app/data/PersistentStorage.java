@@ -4,7 +4,7 @@ import org.roehampton.sad_project.sad_stock_price_app.business_model.IDataStorag
 import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockData;
 
 /**
- * SQLiteStorage implements data storage interfaces for stock data persistence.
+ * PersistentStorage implements data storage interfaces for stock data persistence.
  *
  * SOLID:
  *  - Single Responsibility (SRP): Deals only with saving and retrieving stock data.
@@ -16,7 +16,7 @@ import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockData;
  * SOA:
  *  - Acts as a "storage service" that can be called by other parts of the application.
  */
-public class SQLiteStorage implements IDataStorage, IStockData {
+public class PersistentStorage implements IDataStorage, IStockData {
     @Override
     public void saveStockData(String symbol, double price) {
         System.out.println("Saving " + symbol + " at price " + price + " to SQLite DB.");
