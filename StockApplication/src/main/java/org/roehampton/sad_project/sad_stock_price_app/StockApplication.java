@@ -3,16 +3,23 @@
 CHANGES TO BE MADE (SUGGESTIONS FROM PRODUCT OWNER):
 
 1. Implement error-catching (e.g., empty search bar, numbers,, and invalid stock symbols)
+
 2. Switch APIs from yahooFinance to Alphavantage (free, relatively simple, and easy to use/implement into existing code)
+^^^ please look up documentation if need be, resources should be readily available online for you to use
+
 3. Make a "history" of stock symbols over a period of time, rather than just the current stock price at that time
+
 4. Evidence, at least, one of each S.O.L.I.D principle applied in any area of the code.
-5. Ensure that the component UML diagram and business UMLs are followed correctly.
+
+5. Ensure that the component UML diagram and business UMLs are implemented into the code correctly.
 
 6. Many classes are too simplistic and only PRINT out their functions to the terminal, rather than actually doing them. Please fix.
 
-ADDITIONAL CHANGE THAT NEEDS TO BE MADE: Stock symbol does not automatically appear under its bar. It should show up without needing to press 'GET PRICE' twice.
 
-((also please add comments beneath code blocks so it's clearer what happens, if possible when you can))
+
+ADDITIONAL CHANGE THAT NEEDS TO BE MADE: Stock symbol does not automatically appear under its bar. It should show up without needing to press 'GET PRICE' twice.
+((also please add comments beneath the code blocks so it's clearer what happens, if possible whenever you're able to -keisha))
+(( ensure the code blocks aren't just systemout (aka printing to the terminal) than actually doing what they're supposed to -keisha ))
 
 */
 
