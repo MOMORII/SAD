@@ -5,7 +5,15 @@ import org.roehampton.sad_project.sad_stock_price_app.business_model.IStockAPI;
 import org.roehampton.sad_project.sad_stock_price_app.business_model.IDataStorage;
 
 /**
- * StockDataProvider fetches data from YahooFinance and stores it using SQLiteStorage.
+ * StockDataProvider fetches data from an IStockAPI (e.g., YahooFinance) and stores it via IDataStorage (e.g., SQLiteStorage).
+ *
+ * SOLID:
+ *  - Single Responsibility: Retrieves and stores stock data, no UI or portfolio management here.
+ *  - Open/Closed: We can swap out IStockAPI or IDataStorage with new implementations.
+ *  - Dependency Inversion: Depends on abstractions (IStockAPI, IDataStorage) rather than concrete classes.
+ *
+ * SOA:
+ *  - Another small "service" that orchestrates retrieval (API) and storage.
  */
 public class StockDataProvider implements IStockDataProvider {
     private final IDataStorage storage;
