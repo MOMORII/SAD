@@ -7,6 +7,7 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.layout.VBox;
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * ChartDisplay is responsible for visualizing stock data using JavaFX charts.
  *

@@ -1,4 +1,4 @@
-/*
+/**
 
 CHANGES TO BE MADE (SUGGESTIONS FROM PRODUCT OWNER):
 
@@ -15,13 +15,13 @@ CHANGES TO BE MADE (SUGGESTIONS FROM PRODUCT OWNER):
 
 6. Many classes are too simplistic and only PRINT out their functions to the terminal, rather than actually doing them. Please fix.
 
-
+7. ALSO, make sure all the interfaces in 'business_model' have been readjusted and implemented, according to the component UML
 
 ADDITIONAL CHANGE THAT NEEDS TO BE MADE: Stock symbol does not automatically appear under its bar. It should show up without needing to press 'GET PRICE' twice.
 ((also please add comments beneath the code blocks so it's clearer what happens, if possible whenever you're able to -keisha))
 (( ensure the code blocks aren't just systemout (aka printing to the terminal) than actually doing what they're supposed to -keisha ))
 
-*/
+**/
 
 package org.roehampton.sad_project.sad_stock_price_app;
 

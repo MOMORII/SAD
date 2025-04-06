@@ -1,7 +1,7 @@
-/*
+/**
     NEEDS TO ACT AS A 'PERSISTENT STORAGE' THAT STORES INFORMATION TO A DATABASE, RATHER THAN PRINTING IT OUT TO THE TERMINAL
     ^^ The product owner needds this to be fixed asap.
-*/
+**/
 
 package org.roehampton.sad_project.sad_stock_price_app.data;
 
