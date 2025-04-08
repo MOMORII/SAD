@@ -4,21 +4,33 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.geometry.Insets?>  <!-- Important: we must import Insets! -->
 
+<?import javafx.scene.control.ListView?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.roehampton.sad_project.sad_stock_price_app.MainController"
       spacing="10">
+    <TextField fx:id="portfolioSymbolField" promptText="Stock Symbol"/>
+    <TextField fx:id="portfolioSharesField" promptText="Shares"/>
+    <Button text="Add to Portfolio" onAction="#addToPortfolio"/>
+    <Button text="Remove from Portfolio" onAction="#removeFromPortfolio"/>
+    <Label fx:id="portfolioMessageLabel"/>
+    <Label text="Portfolio" />
+    <VBox fx:id="portfolioContainer" spacing="10"/>
 
-    <!-- Define the padding explicitly -->
-    <padding>
-        <Insets top="20.0" bottom="20.0" left="20.0" right="20.0"/>
-    </padding>
+    <Label fx:id="portfolioTotalValueLabel" text="Total Value: $" />
+    <TextField fx:id="stockSymbolField" promptText="Enter stock symbol"/>
+    <Button text="Get Price" onAction="#fetchStockPrice"/>
+    <Label fx:id="stockPriceLabel"/>
+    <VBox fx:id="chartContainer"/>
+    <VBox>
+        <TextField fx:id="stockSymbolTextField" promptText="Enter stock symbol" />
+        <Button fx:id="addStockButton" text="Add to Watchlist" />
+        <Button fx:id="removeStockButton" text="Remove from Watchlist" />
+        <ListView fx:id="watchlistView" />
+        <Button fx:id="addButton" text="Add to Watchlist" layoutX="100" layoutY="100" onAction="#addStockToWatchlist" />
+        <Button fx:id="removeButton" text="Remove from Watchlist" layoutX="200" layoutY="100" onAction="#removeStockFromWatchlist" />
+        <Label fx:id="watchlistLabel" layoutX="100" layoutY="150" />
+    </VBox>
 
-    <!-- UI elements below -->
-    <TextField fx:id="stockSymbolField" promptText="Enter stock symbol" />
-    <Button text="Get Price" onAction="#fetchStockPrice" />
-    <Label fx:id="stockPriceLabel" text="Stock price will appear here" />
-    <VBox fx:id="chartContainer" prefHeight="400"/>
 </VBox>
