@@ -1,6 +1,8 @@
 module org.roehampton.sad_project.sad_stock_price_app {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires org.json;
 
     opens org.roehampton.sad_project.sad_stock_price_app to javafx.fxml;
     opens org.roehampton.sad_project.sad_stock_price_app.data to javafx.base;
