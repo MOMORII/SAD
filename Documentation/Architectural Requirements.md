@@ -2,7 +2,7 @@
 The architectural design of the Share Price Comparison Web Application follows key principles of Simple Architecture, Clean Architecture, and Service-Oriented Architecture (SOA) to ensure modularity, scalability, and maintainability. This section presents a series of UML diagrams that illustrate the system’s component structure, business logic, use case interactions, and system interfaces, and thhus, providing a clear overview of how different parts of the application interact with one another.
 
 ## Revised Component UML Diagram
-The component UML diagram below has been refined to reflect a structured and modular approach to application architecture through numerous revisions and renditions created to better reflect what we expect our project to be comprised of. The revised diagram encapsulates key functional components, including the 'StockDataProvider' compound component subsystem, which integrates both 'SQLiteStorage' and 'Yahoo Finance API' for data retrieval and persistence. This ensures efficient stock data management and provides a clear separation of concerns. The diagram also showcases the provided and required interfaces that enable seamless communication between components while maintaining architectural integrity.
+The component UML diagram below has been refined to reflect a structured and modular approach to application architecture through numerous revisions and renditions created to better reflect what we expect our project to be comprised of. The revised diagram encapsulates key functional components, including the 'StockDataProvider' compound component subsystem, which integrates both 'SQLiteStorage' and 'Alphavantage Finance API' for data retrieval and persistence. This ensures efficient stock data management and provides a clear separation of concerns. The diagram also showcases the provided and required interfaces that enable seamless communication between components while maintaining architectural integrity.
 
 ![Screenshot 2025-03-18 150356](https://github.com/user-attachments/assets/aa2e6b89-5491-473e-92b7-3e0246a8d8e8)
 
@@ -13,9 +13,9 @@ The component UML diagram below has been refined to reflect a structured and mod
 | ChartDisplay                           | Responsible for visualising stock data obtained from StockPrice.                                                                                                           |
 | Watchlist                              | Handles the tracking and monitoring of user-specified stocks.                                                                                                              |
 | UserPortfolio                          | Manages user’s stock holdings, portfolio management, and investment tracking.                                                                                              |
-| SQLiteStorage                          | Acts as the local database responsible for storing stock price data retrieved from Yahoo Finance.                                                                          |
-| YahooFinance                           | Serves as the real-time stock price data provider, fetching up-to-date price information from an external (Yahoo) API.                                                     |
-| StockDataProvider (Subsystem/Compound) | Encapsulates 'SQLiteStorage' & 'YahooFinance' as internal components, delegating retrieval/storage functions while exposing only the IDataStorage & IStockData interfaces. |
+| SQLiteStorage                          | Acts as the local database responsible for storing stock price data retrieved from Alphavantage Finance.                                                                          |
+| AlphavantageFinance                           | Serves as the real-time stock price data provider, fetching up-to-date price information from an external (Alphavantage) API.                                                     |
+| StockDataProvider (Subsystem/Compound) | Encapsulates 'SQLiteStorage' & 'AlphavantageFinance' as internal components, delegating retrieval/storage functions while exposing only the IDataStorage & IStockData interfaces. |
 
 As mentioned before, this component UML diagram has been made to better reflect SOLID principles and clean architecture, eliminating cyclic dependencies and ensure data handling was encapsulated properly through our use of compound components (subsystems). Based on the feedback recieved from our lecturer, we ensured we strictly adhered to UML component modelling, evident through the lollipops (for provided interfaces), sockets (for required interfaces), and delegate arrows (<<delegate>>) incorporated into our new component design.
 
@@ -33,7 +33,7 @@ ___
 
 | Use Case                  | Description                                       |
 |---------------------------|---------------------------------------------------|
-| 1. Fetch stock price      | Retrieve stock price data from Yahoo Finance      |
+| 1. Fetch stock price      | Retrieve stock price data from an API     |
 | 2. Store stock data       | Save stock prices in SQLite for offline access    |
 | 3. Compare stock trends   | View stock performance of two different companies |
 | 4. Visualise stock charts | Display stock price movements graphically         |
@@ -47,11 +47,11 @@ ___
 Steps:
 1. User searches up a stock symbol.
    1. System Displays an input field for the stock symbol
-2. User requests stock price. System sends request to YahooFinance API.
+2. User requests stock price. System sends request to AlphavantageAPI.
    1. User input is recieved
-   2. System sends a request to YahooFinance API.
+   2. System sends a request to AlphavantageAPI.
 3. System fetches stock price
-   1. YahooFinance API responds to the system
+   1. AlphavantageAPI responds to the system
    2. The system recieves the response (real-time data from the API)
    3. The system returns the latest stock price
 4. System displays stock price
@@ -63,9 +63,9 @@ ___
 
 Steps:
 1. System receives stock price
-   1. System retrieves stock price from Yahoo Finance API
+   1. System retrieves stock price from AlphavantageAPI
 2. System checks database/storage
-   1. System queries SQLite database to check for pre-existing data
+   1. System queries the SQLite database to check for pre-existing data
 3. System stores stock data
    1. If the stock data already exists, update the price
    2. Otherwise, insert a new entry
